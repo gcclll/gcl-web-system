@@ -1,5 +1,4 @@
 {
-  "extends": "tsconfig/vue-lib.json",
-  "include": ["."],
-  "exclude": ["dist", "build", "node_modules"]
+  "extends": "tsconfig/vue.json",
+  "include": ["."]
 }

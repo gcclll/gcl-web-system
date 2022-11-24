@@ -1,5 +1,4 @@
 {
-  "extends": "tsconfig/react-lib.json",
-  "include": ["."],
-  "exclude": ["dist", "build", "node_modules"]
+  "extends": "tsconfig/react.json",
+  "include": ["."]
 }
