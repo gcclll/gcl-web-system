@@ -1,7 +1,0 @@
-:PROPERTIES:
-:ID:       E49886E4-8807-4D24-B837-3091BCF6A5AC
-:END:
-#+title: emacs hacking
-#+filetags: :article:
-
-* Issues
