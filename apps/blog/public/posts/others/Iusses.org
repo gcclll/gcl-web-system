@@ -1,0 +1,28 @@
+:PROPERTIES:
+:ID:       49E5EC9F-89FD-4633-BBF5-450B9480B817
+:END:
+#+title: Iusses
+#+created: [2022-11-24 Thu 08:44]
+#+filetags: :others:
+#+startup: overview hideblocks
+
+* git
+** git-credential-manager
+
+~/usr/local/share/gcm-core/git-credential-manager get: /usr/local/share/gcm-core/git-credential-manager: No such file or directory~
+
+reinstall it:
+
+[[https://github.com/microsoft/Git-Credential-Manager-for-Mac-and-Linux/blob/master/Install.md][Git-Credential-Manager-for-Mac-and-Linux/Install.md at master · microsoft/Git-Credential-Manager-for-Mac-and-Linux]]
+
+1. Download [[https://github.com/Microsoft/Git-Credential-Manager-for-Mac-and-Linux/releases/download/git-credential-manager-2.0.4/git-credential-manager-2.0.4.jar][git-credential-manager.ja]]r -> =~/git-credential-manager/=
+2. config: ~git config --global credential.helper '!java -Ddebug=false -Djava.net.useSystemProxies=true -jar ~/git-credential-manager/git-credential-manager-2.0.4.jar'~
+
+   如果出现
+   #+begin_example
+   warning: credential.helper has multiple values
+   error: cannot overwrite multiple values with a single value
+   Use a regexp, --add or --replace-all to change credential.helper.
+   #+end_example
+
+   就加上 ~--replace-all~

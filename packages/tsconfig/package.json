@@ -4,7 +4,13 @@
   "private": true,
   "files": [
     "base.json",
+    "shared-utils.json",
     "nextjs.json",
-    "react-library.json"
-  ]
+    "react-lib.json",
+    "vue-web.json",
+    "vue-lib.json"
+  ],
+  "devDependencies": {
+    "@vue/tsconfig": "^0.1.3"
+  }
 }

@@ -1,0 +1,9 @@
+{
+  "extends": "./vue.app.json",
+  "exclude": [],
+  "compilerOptions": {
+    "composite": true,
+    "lib": [],
+    "types": ["node", "jsdom"]
+  }
+}

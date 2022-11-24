@@ -1,0 +1,9 @@
+:PROPERTIES:
+:ID:       7267ABF5-2F60-49A9-804B-841A4DDAE84B
+:END:
+#+title: My Front-End Standard
+#+created: [2022-11-23 Wed 12:19]
+#+filetags: :web:
+#+startup: overview hideblocks
+
+* TODO 规范说明

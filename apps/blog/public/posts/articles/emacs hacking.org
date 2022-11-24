@@ -1,0 +1,21 @@
+:PROPERTIES:
+:ID:       E49886E4-8807-4D24-B837-3091BCF6A5AC
+:END:
+#+title: emacs hacking
+#+filetags: :article:
+
+* Issues
+** Minibuffer
+*** EAF 在 mac 上遮挡了 minibuffer
+
+Intel mac下emacs 28.2，把 eaf.el 下的 ~defun eaf--get-titlebar-height ()~ 中32改为
+20，遮挡问题解决
+** Indentation
+#+begin_src emacs-lisp
+;; 解决　typescript-mode 下缩进问题
+(add-hook 'typescript-mode-hook (lambda () (setq electric-indent-mode nil)))
+#+end_src
+** Ohters
+*** compile tree-sitter on mac m1 chip
+
+[[https://nowislewis.github.io/posts/%E5%A6%82%E4%BD%95%E5%9C%A8apple-siliconm1%E4%B8%8A%E7%BC%96%E8%AF%91tree-sitter/][如何在Apple Silicon(M1)上编译tree-sitter - Now is Lewis time]]o

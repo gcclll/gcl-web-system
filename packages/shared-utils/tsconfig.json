@@ -1,0 +1,5 @@
+{
+  "extends": "tsconfig/shared-utils.json",
+  "include": ["."],
+  "exclude": ["dist", "build", "node_modules"]
+}

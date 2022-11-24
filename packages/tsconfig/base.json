@@ -16,5 +16,13 @@
     "skipLibCheck": true,
     "strict": true
   },
-  "exclude": ["node_modules"]
+  "include": [
+    "index.d.ts",
+    "types.d.ts",
+    "env.d.ts",
+    "src/**/*",
+    "src/**/*.vue",
+    "next-env.d.ts"
+  ],
+  "exclude": ["node_modules", "src/**/__tests__/*"]
 }

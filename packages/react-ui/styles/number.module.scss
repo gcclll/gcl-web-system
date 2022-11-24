@@ -1,0 +1,18 @@
+@property --num {
+  syntax: '<integer>';
+  initial-value: 0;
+  inherits: false;
+}
+
+.glNumberAni {
+  transition: --num 1s;
+  counter-reset: num var(--num);
+
+  &:hover {
+    --num: 100;
+  }
+
+  &::after {
+    content: counter(num);
+  }
+}

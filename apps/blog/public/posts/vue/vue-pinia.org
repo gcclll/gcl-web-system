@@ -1,0 +1,9 @@
+:PROPERTIES:
+:ID:       CAC8C2DE-67C8-408E-A17B-4E30E69D1566
+:END:
+#+title: vue-pinia
+#+created: [2022-11-20 Sun 22:51]
+#+filetags: :vue:
+#+startup: overview hideblocks
+
+* pinia

@@ -1,0 +1,15 @@
+:PROPERTIES:
+:ID:       3D7106D9-6058-4D0C-B85C-F1FC739B1098
+:END:
+#+title: home
+#+filetags: :article:
+
+* [[id:7267ABF5-2F60-49A9-804B-841A4DDAE84B][My Front-End Standard]]
+* Emacs
+* Vue
+** [[id:CAC8C2DE-67C8-408E-A17B-4E30E69D1566][vue-pinia]]
+* React
+* Tailwindcss
+* Development
+[[id:26036538-15F4-49E8-B9F2-50E036D425B2][Awesomes Development Resources]]
+* [[id:49E5EC9F-89FD-4633-BBF5-450B9480B817][Iusses]]

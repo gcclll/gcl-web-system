@@ -1,0 +1,19 @@
+{
+  "name": "shared-utils",
+  "version": "0.0.0",
+  "main": "./index.ts",
+  "types": "./index.ts",
+  "license": "MIT",
+  "scripts": {
+    "lint": "eslint *.ts*"
+  },
+  "devDependencies": {
+    "config": "workspace:*",
+    "eslint": "^7.32.0",
+    "tsconfig": "workspace:*",
+    "typescript": "^4.5.2"
+  },
+  "dependencies": {
+    "mousetrap": "^1.6.5"
+  }
+}

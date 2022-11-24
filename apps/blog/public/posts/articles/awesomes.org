@@ -1,0 +1,167 @@
+:PROPERTIES:
+:ID:       26036538-15F4-49E8-B9F2-50E036D425B2
+:END:
+#+title: Awesome Development Resources
+#+filetags: :article:
+
+* TailwindCSS
+- [[https://github.com/innocenzi/tailwindcss-theming][innocenzi/tailwindcss-theming: Tailwind CSS plugin that implements CSS-variables-based swappable themes]], 怎么定制主题。
+- [[https://github.com/ecklf/tailwindcss-radix][ecklf/tailwindcss-radix: Utilities and variants for styling Radix state]] 挺漂亮的配色。
+- [[https://tailwind-colors.meidev.co/][Tailwind Colors]] 配置文件可视化生成器
+
+  类似网站：
+
+  [[https://stefanbuck.com/tailwind-color-theme-explorer][Color Theme Explorer for Tailwind CSS]]
+
+  [[https://javisperez.github.io/tailwindcolorshades/][Tailwind Color Shades Generator]]
+
+  [[https://adevade.github.io/color-scheme-generator/][Color Scheme Generator]]
+- [[https://hypercolor.dev/][Gradients for Tailwind CSS | Hypercolor]] red:渐变配色方案
+- [[https://uicolors.app/create][UI Colors | Tailwind CSS Color Shades Generator & Editor]] red:通过输入一个颜色生成一套简单的配色方案
+- [[https://windframe.devwares.com/][WindFrame]] red:网站生成器
+
+
+** icons
+- [[https://heroicons.com/][Heroicons]] 基于 Tailwind 的图标
+
+** gradients
+- [[https://gradient-designer.csspost.com/][gradient-designer]] 渐变生成器
+
+** animations
+- [[https://tail-animista.vercel.app/play/basic/scale-up/scale-up-center][Tailanimista]] red:动画样式生成器
+- [[https://snippets.alexandru.so/][Snippets 几个简单的动画组件]]
+** components
+
+- [[https://xtendui.com/components][Xtend UI - Components 组件库]]
+- [[https://headlessui.com/][Headless UI - Unstyled, fully accessible UI components]] green:官方UI库
+* CSS3
+
+- [#A] [[https://css-tricks.com/][CSS-Tricks - Tips, Tricks, and Techniques on using Cascading Style Sheets.]]
+- [#C] [[https://www.html5tricks.com/][HTML5资源教程 | 分享HTML5开发资源和开发教程]]
+
+** scrollbar 样式修改
+
+[[https://segmentfault.com/a/1190000012800450][html - css scrollbar样式设置_个人文章 - SegmentFault 思否]]
+
+#+begin_src css
+/*定义滚动条高宽及背景
+ 高宽分别对应横竖滚动条的尺寸*/
+::-webkit-scrollbar
+{
+    width:16px;
+    height:16px;
+    background-color:#F5F5F5;
+}
+/*定义滚动条轨道
+ 内阴影+圆角*/
+::-webkit-scrollbar-track
+{
+    -webkit-box-shadow:inset 0 0 6px rgba(0,0,0,0.3);
+    border-radius:10px;
+    background-color:#F5F5F5;
+}
+/*定义滑块
+ 内阴影+圆角*/
+::-webkit-scrollbar-thumb
+{
+    border-radius:10px;
+    -webkit-box-shadow:inset 0 0 6px rgba(0,0,0,.3);
+    background-color:#555;
+}
+#+end_src
+* JavaScript
+
+- [[https://js.libhunt.com/][Awesome JavaScript | LibHunt]]
+
+** animations
+
+- [[https://animejs.com/documentation/#functionBasedPropVal][Documentation | anime.js]]
+- [[https://www.framer.com/motion/][Production-Ready Animation Library for React | Framer Motion]] 实现页面之间切换时的动画库
+
+* Typescript
+** Declare
+
+当引入第三方库时，又没有类型定义的时候，比如有个库： 其中导出的变量名为： ~wx~
+
+我们在 ~typescript~ 项目中使用的时候可能就会报 ~wx not found~ 问题。
+
+为了解决这个问题，可以使用 ~declare~ 对它进行声明，让 ~typescript~ 能够识别它。
+
+简而言之， ~declare~ 有<red:无中生有>的感觉。
+
+使用方式： ~declare var wx: any~ 这里 var 是指声明一个 ~typescript~ 变量的意思。
+
+1. 声明变量，如上面的 ~wx~, 这种方式比较暴力，正常应该使用 ~wx.d.ts~ 来完整定义其类型。
+2. 声明函数，只声明不实现，如： ~declare function eval(x: string): any~
+3. 声明模块，如： ~scss,css,jpg,png,ttf~ 等等,如果不声明的话可能会出现类似下面的报错。
+   #+begin_example
+   Error：找不到模块“./file.css”或其相应的类型声明。ts(2307)
+   #+end_example
+
+   如，声明 ~css~ 样式文件, ~jpg~ 图片，　~ttf~ 字体
+   #+begin_src typescript
+    declare module '*.css' {
+        const css: string;
+        exoprt default css;
+    }
+
+    declare module '*.jpg' {
+        const src: string;
+        export default src;
+    }
+
+    declare module '*.ttf' {
+        const src: string;
+        export default src;
+    }
+   #+end_src
+4. 扩展引入的库，如：
+
+   #+begin_src typescript
+   import { AxiosInstance } from 'axios'
+   declare module "@vue/runtime-core" {
+     interface ComopnentCustomProperties {
+       $axios: AxiosInstance
+     }
+   }
+   #+end_src
+** Iusses
+*** :bug: [yas] Error in condition evaluation: Symbol’s function definition is void: js2-node-type ?
+* React
+
+** Hooks study
+
+- [[https://github.com/rehooks/awesome-react-hooks][rehooks/awesome-react-hooks: Awesome React Hooks]]
+- [[https://wattenberger.com/blog/react-hooks][Thinking in React Hooks]]
+- [[https://reactjs.org/docs/hooks-intro.html][Introducing Hooks – React]]
+
+** typescript
+
+- [[https://react-typescript-cheatsheet.netlify.app/docs/basic/getting-started/context/][Context | React TypeScript Cheatsheets store+typescript+hooks]]
+** keyboards listener library
+
+- [#A] [[https://github.com/JohannesKlauss/react-hotkeys-hook][JohannesKlauss/react-hotkeys-hook: React hook for using keyboard shortcuts in components.]]
+- [[https://github.com/jaywcjlove/hotkeys][jaywcjlove/hotkeys: ➷ A robust Javascript library for capturing keyboard input. It has no dependencies.]]
+- [[https://github.com/ccampbell/mousetrap][ccampbell/mousetrap: Simple library for handling keyboard shortcuts in Javascript]] red:last-commit-2020-06-24
+* Next.js
+
+** Iusses
+*** document is not defined !!!
+
+要在 hooks 函数中才能使用浏览器中的一些对象， 如：
+
+#+begin_src typescript
+const initMousetrapCallback = useCallback(
+  () => {
+    initMousetrap(document)
+  }, []
+)
+#+end_src
+* Map 开发
+
+** SuperMap 超图
+
+[[https://www.supermap.com/cn/][SuperMap|超图软件 - GIS - 地理信息系统软件]]
+* MacOS
+** Parrallels
+[[https://luoxx.top/archives/pd-18-active][Parallels Desktop 18.1.0 53311 破解教程（pd18永久授权）]]

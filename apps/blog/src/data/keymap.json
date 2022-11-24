@@ -1,0 +1,8 @@
+{
+  "control+c": [{ "key": "n", "value": "org-roam-find" }],
+  "control+h": [
+    { "key": "C-g", "value": "abort" },
+    { "key": "C-h", "value": "help" },
+    { "key": "C-c n", "value": "org-roam-find" }
+  ]
+}

@@ -1,0 +1,12 @@
+{
+  "$schema": "https://json.schemastore.org/tsconfig",
+  "display": "Vue Web",
+  "extends": ["@vue/tsconfig/tsconfig.web.json", "./base.json"],
+  "compilerOptions": {
+    "composite": true,
+    "types": ["node"],
+    "paths": {
+      "@/*": ["./src/*"]
+    }
+  }
+}

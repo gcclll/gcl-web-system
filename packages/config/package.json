@@ -1,0 +1,27 @@
+{
+  "name": "config",
+  "version": "0.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "files": [
+    "eslint-preset.js",
+    "tailwind.config.js",
+    "postcss.config.js"
+  ],
+  "devDependencies": {
+    "@vue/eslint-config-prettier": "^7.0.0",
+    "@vue/eslint-config-typescript": "^11.0.2",
+    "eslint": "^7.32.0",
+    "eslint-config-next": "^12.0.8",
+    "eslint-config-prettier": "^8.3.0",
+    "eslint-config-turbo": "latest",
+    "eslint-plugin-react": "7.31.8",
+    "eslint-plugin-vue": "^9.6.0",
+    "prettier": "^2.7.1",
+    "sass": "^1.55.0",
+    "typescript": "^4.7.4"
+  },
+  "publishConfig": {
+    "access": "public"
+  }
+}
