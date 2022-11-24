@@ -1,6 +1,6 @@
 import { ReactNode } from 'react'
 
-type BaseLayoutProps = {
+interface BaseLayoutProps {
   children: ReactNode
 }
 

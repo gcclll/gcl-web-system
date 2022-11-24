@@ -1,6 +1,6 @@
 import { ReactNode } from 'react'
 
-type VimLayoutProps = {
+interface VimLayoutProps {
   children: ReactNode
 }
 

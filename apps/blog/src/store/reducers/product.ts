@@ -1,28 +1,28 @@
-import { Types, ActionMap } from './actions'
+import { type ActionMap, Types } from './actions'
 
-export type ProductType = {
-  id: number;
-  name: string;
-  price: number;
-};
+export interface ProductType {
+  id: number
+  name: string
+  price: number
+}
 
-export type ProductPayload = {
+export interface ProductPayload {
   [Types.CREATE_PRODUCT]: {
-    id: number;
-    name: string;
-    price: number;
-  };
+    id: number
+    name: string
+    price: number
+  }
   [Types.DELETE_PRODUCT]: {
-    id: number;
-  };
-};
+    id: number
+  }
+}
 
 export type ProductActions =
-  ActionMap<ProductPayload>[keyof ActionMap<ProductPayload>];
+  ActionMap<ProductPayload>[keyof ActionMap<ProductPayload>]
 
 export const productReducer = (
   state: ProductType[],
-  action: ProductActions,
+  action: ProductActions
 ) => {
   switch (action.type) {
     case Types.CREATE_PRODUCT:
@@ -31,11 +31,10 @@ export const productReducer = (
         {
           ...action.payload,
         },
-      ];
+      ]
     case Types.DELETE_PRODUCT:
-      return [...state.filter(product => product.id !== action.payload.id)];
+      return [...state.filter((product) => product.id !== action.payload.id)]
     default:
-      return state;
+      return state
   }
-};
-
+}

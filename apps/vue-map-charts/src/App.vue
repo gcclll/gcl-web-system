@@ -1,7 +1,7 @@
 <script setup lang="ts">
-import { RouterLink, RouterView } from "vue-router";
-import HelloWorld from "./components/HelloWorld.vue";
-import { Button } from "@aftt/vue-ui";
+import { RouterLink, RouterView } from 'vue-router'
+import { Button } from '@aftt/vue-ui'
+import HelloWorld from './components/HelloWorld.vue'
 </script>
 
 <template>
@@ -13,14 +13,18 @@ import { Button } from "@aftt/vue-ui";
       src="@/assets/logo.svg"
       width="125"
       height="125"
-    />
+    >
 
     <div class="text-white underline wrapper center">
       <HelloWorld msg="You did it!" />
 
       <nav>
-        <RouterLink to="/">Home</RouterLink>
-        <RouterLink to="/about">About</RouterLink>
+        <RouterLink to="/">
+          Home
+        </RouterLink>
+        <RouterLink to="/about">
+          About
+        </RouterLink>
       </nav>
     </div>
   </header>

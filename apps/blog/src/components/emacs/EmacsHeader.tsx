@@ -1,13 +1,11 @@
-import * as React from 'react';
+import * as React from 'react'
 
-type EmacsHeaderProps = {
-  className?: string;
-};
+interface EmacsHeaderProps {
+  className?: string
+}
 
 const EmacsHeader: React.FC<EmacsHeaderProps> = () => {
-  return <div className="text-center bg-black">emacs header</div>;
-};
+  return <div className="text-center bg-black">emacs header</div>
+}
 
-
-export default EmacsHeader;
-
+export default EmacsHeader

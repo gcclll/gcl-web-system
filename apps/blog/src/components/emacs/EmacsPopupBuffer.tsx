@@ -1,6 +1,6 @@
 import { EmacsDataTypes, useStore } from '../../store'
 
-type EmacsPopupBufferProps = {
+interface EmacsPopupBufferProps {
   className?: string
 }
 

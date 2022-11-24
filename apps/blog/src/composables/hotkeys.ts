@@ -1,13 +1,13 @@
 import { useCallback } from 'react'
-import { EmacsDataTypes, Types, EmacsPayload, useStore } from '../store'
+import { EmacsDataTypes, Types, useStore } from '../store'
 import keymaps from '../data/keymap.json'
 import { MousetrapCallback } from '@aftt/shared-utils/mousetrap'
 import { useMousetrapBind } from './mousetrap'
 
-export function useHotkeyBind<Key>(
+export function useHotkeyBind(
   keyStroke: string,
-  type: Key,
-  payload: EmacsPayload<Key>
+  type: Types,
+  payload?: unknown
 ) {
   const { dispatch } = useStore()
   const contrlHCallback = useCallback<MousetrapCallback>(() => {
@@ -18,21 +18,14 @@ export function useHotkeyBind<Key>(
 
 export function useHelpHotkey() {
   const keyStroke = 'control+h'
-  useHotkeyBind<Types.SET_EMACS_POPUP_BUFFER>(
-    keyStroke,
-    Types.SET_EMACS_POPUP_BUFFER,
-    {
-      type: EmacsDataTypes.KEYMAP,
-      data: keymaps[keyStroke],
-    }
-  )
+  useHotkeyBind(keyStroke, Types.SET_EMACS_POPUP_BUFFER, {
+    type: EmacsDataTypes.KEYMAP,
+    data: keymaps[keyStroke],
+  })
 }
 
 export function useAbortHotkey() {
-  useHotkeyBind<Types.RESET_EMACS_POPUP_BUFFER>(
-    'control+g',
-    Types.RESET_EMACS_POPUP_BUFFER
-  )
+  useHotkeyBind('control+g', Types.RESET_EMACS_POPUP_BUFFER)
 }
 
 export function useHotkeys() {

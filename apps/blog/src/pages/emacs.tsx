@@ -1,6 +1,6 @@
 import { useRef } from 'react'
 import { useHotkeys } from '../composables'
-import { NextPageWithLayout } from './_app'
+import { type NextPageWithLayout } from './_app'
 
 const Emacs: NextPageWithLayout = () => {
   const emacsEl = useRef<HTMLDivElement>(null)

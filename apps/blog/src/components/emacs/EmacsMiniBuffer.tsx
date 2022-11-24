@@ -1,11 +1,11 @@
-import { useStore } from '../../store';
+import { useStore } from '../../store'
 
-type EmacsMiniBufferProps = {
-  className?: string;
-};
+interface EmacsMiniBufferProps {
+  className?: string
+}
 
 const EmacsMiniBuffer: React.FC<EmacsMiniBufferProps> = () => {
-  const { state } = useStore();
+  const { state } = useStore()
   const miniBuffer = state.emacs.miniBuffer
 
   return (
@@ -13,7 +13,7 @@ const EmacsMiniBuffer: React.FC<EmacsMiniBufferProps> = () => {
       <div className="w-1/2 h-full">{miniBuffer.left}</div>
       <div className="pr-4 w-1/2 h-full text-right">{miniBuffer.right}</div>
     </div>
-  );
-};
+  )
+}
 
-export default EmacsMiniBuffer;
+export default EmacsMiniBuffer

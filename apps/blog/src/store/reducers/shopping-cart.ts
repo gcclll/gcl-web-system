@@ -1,11 +1,11 @@
-import { Types, ActionMap } from "./actions";
+import { type ActionMap, Types } from './actions'
 
-export type ShoppingCartPayload = {
-  [Types.ADD_PRODUCT]: undefined;
-};
+export interface ShoppingCartPayload {
+  [Types.ADD_PRODUCT]: undefined
+}
 
 export type ShoppingCartActions =
-  ActionMap<ShoppingCartPayload>[keyof ActionMap<ShoppingCartPayload>];
+  ActionMap<ShoppingCartPayload>[keyof ActionMap<ShoppingCartPayload>]
 
 export const shoppingCartReducer = (
   state: number,
@@ -13,8 +13,8 @@ export const shoppingCartReducer = (
 ) => {
   switch (action.type) {
     case Types.ADD_PRODUCT:
-      return state + 1;
+      return state + 1
     default:
-      return state;
+      return state
   }
-};
+}

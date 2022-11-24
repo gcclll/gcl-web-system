@@ -1,1 +1,1 @@
-module.exports = require("@aftt/config/tailwind.config")
+module.exports = require('@aftt/config/tailwind.config')

@@ -1,4 +1,4 @@
-import { Types, ActionMap } from './actions'
+import { type ActionMap, Types } from './actions'
 
 export enum EmacsDataTypes {
   NULL, // 默认
@@ -16,17 +16,17 @@ export interface EmacsArticleItem extends EmacsDataItem {
   title: string
 }
 
-export type EmacsPopupBufferData = {
+export interface EmacsPopupBufferData {
   type: EmacsDataTypes
   data: EmacsDataItem[]
 }
 
-export type EmacsMiniBufferData = {
+export interface EmacsMiniBufferData {
   left?: string
   right?: string
 }
 
-export type EmacsStateType = {
+export interface EmacsStateType {
   popupBuffer: EmacsPopupBufferData
   miniBuffer: EmacsMiniBufferData
   articles?: EmacsArticleItem[]

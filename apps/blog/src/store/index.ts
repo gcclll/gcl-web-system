@@ -1,21 +1,13 @@
-// Product & ShoppingCart is only for testing or reference...
 import { useContext } from 'react'
 import { createStore } from '@aftt/react-ui'
 import {
-  EmacsStateType,
-  // ProductActions,
-  // productReducer,
-  // ProductType,
-  // ShoppingCartActions,
-  // shoppingCartReducer,
-  EmacsActions,
+  type EmacsActions,
+  type EmacsStateType,
   emacsReducer,
   EmacsDataTypes,
 } from './reducers'
 
-type InitialStateType = {
-  // products: ProductType[]
-  // shoppingCart: number
+export interface InitialStateType {
   emacs: EmacsStateType
   showAside?: boolean
 }
@@ -41,16 +33,10 @@ const initialState = {
 }
 
 // 所有 reducer 类型
-// export type ReducerActions = ProductActions | ShoppingCartActions | EmacsActions
 export type ReducerActions = EmacsActions
 
 // 每个状态都有自己的 reducer
 const reducer = (state: InitialStateType, action: ReducerActions) => ({
-  // products: productReducer(state.products, action as ProductActions),
-  // shoppingCart: shoppingCartReducer(
-  // state.shoppingCart,
-  // action as ShoppingCartActions
-  // ),
   emacs: emacsReducer(state.emacs, action as EmacsActions),
 })
 

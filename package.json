@@ -14,7 +14,8 @@
     "format": "prettier --write \"**/*.{ts,tsx,md,vue,js,jsx}\"",
     "changeset": "changeset",
     "version-packages": "changeset version",
-    "release": "turbo run build --filter=docs^... && changeset publish"
+    "release": "turbo run build --filter=docs^... && changeset publish",
+    "prepare": "husky install"
   },
   "devDependencies": {
     "autoprefixer": "^10.4.12",
@@ -24,7 +25,10 @@
     "prettier": "latest",
     "prettier-plugin-tailwindcss": "^0.1.13",
     "tailwindcss": "^3.1.8",
-    "turbo": "latest"
+    "turbo": "latest",
+    "husky": "^8.0.0",
+    "@aftt/config": "workspace:*",
+    "@aftt/tsconfig": "workspace:*"
   },
   "engines": {
     "node": ">=14.0.0"
