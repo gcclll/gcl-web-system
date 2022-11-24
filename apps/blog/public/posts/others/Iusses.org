@@ -26,3 +26,9 @@ reinstall it:
    #+end_example
 
    就加上 ~--replace-all~
+
+* emacs
+** not module found: epc
+
+~$ gcl cp path~
+
