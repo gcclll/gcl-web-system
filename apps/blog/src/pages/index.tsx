@@ -1,7 +1,7 @@
 import { useRouter } from 'next/router';
 import { useCallback, useEffect, useState } from 'react';
-import { MacProgressBar, IconArrowPath } from 'react-ui';
-import { increaseNumberInterval } from 'shared-utils';
+import { MacProgressBar, IconArrowPath } from '@aftt/react-ui';
+import { increaseNumberInterval } from '@aftt/shared-utils';
 import { NextPageWithLayout } from './_app';
 
 const Home: NextPageWithLayout = () => {

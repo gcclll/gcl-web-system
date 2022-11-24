@@ -1,5 +1,5 @@
 import { useEffect } from 'react'
-import { Mousetrap, MousetrapCallback } from 'shared-utils/mousetrap'
+import { Mousetrap, MousetrapCallback } from '@aftt/shared-utils/mousetrap'
 
 export function useMousetrapBind(key: string, callback: MousetrapCallback) {
   // TODO

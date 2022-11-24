@@ -1,6 +1,6 @@
 // Product & ShoppingCart is only for testing or reference...
 import { useContext } from 'react'
-import { createStore } from 'react-ui'
+import { createStore } from '@aftt/react-ui'
 import {
   EmacsStateType,
   // ProductActions,

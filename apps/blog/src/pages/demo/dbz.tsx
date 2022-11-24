@@ -1,5 +1,5 @@
 import { useEffect, useRef } from 'react';
-import { drawTextWaterfall } from 'shared-utils';
+import { drawTextWaterfall } from '@aftt/shared-utils';
 import { NextPageWithLayout } from '../_app';
 
 const Home: NextPageWithLayout = () => {

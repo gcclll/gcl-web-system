@@ -1,7 +1,7 @@
 <script setup lang="ts">
 import { RouterLink, RouterView } from "vue-router";
 import HelloWorld from "./components/HelloWorld.vue";
-import { Button } from "vue-ui";
+import { Button } from "@aftt/vue-ui";
 </script>
 
 <template>

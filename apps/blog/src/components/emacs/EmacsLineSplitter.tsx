@@ -1,5 +1,5 @@
 import * as React from 'react';
-import { classnames } from 'shared-utils';
+import { classnames } from '@aftt/shared-utils';
 import config from './config';
 
 const EmacsLineSplitter: React.FC = () => {

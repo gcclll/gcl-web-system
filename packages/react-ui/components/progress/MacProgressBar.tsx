@@ -1,5 +1,5 @@
 import * as React from 'react';
-import { uniqueClassNames } from 'shared-utils';
+import { uniqueClassNames } from '@aftt/shared-utils';
 
 type MacProgressBarProps = {
   className?: string;

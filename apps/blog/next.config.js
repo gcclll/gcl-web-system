@@ -1,4 +1,4 @@
-const withTM = require('next-transpile-modules')(['react-ui', 'shared-utils']);
+const withTM = require('next-transpile-modules')(['@aftt/react-ui', '@aftt/shared-utils']);
 
 /** @type {import('next').NextConfig} */
 const nextConfig = withTM({

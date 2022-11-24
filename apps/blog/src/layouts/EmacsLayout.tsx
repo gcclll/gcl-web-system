@@ -1,5 +1,5 @@
 import React, { ReactNode } from 'react';
-import { classnames } from 'shared-utils';
+import { classnames } from '@aftt/shared-utils';
 import {
   EmacsHeader,
   EmacsLineSplitter,

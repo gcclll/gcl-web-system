@@ -1,4 +1,4 @@
-@import 'config/styles/tailwind.css';
+@import '@aftt/config/styles/tailwind.css';
 
 html,
 body {

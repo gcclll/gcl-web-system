@@ -1,7 +1,7 @@
 import { useCallback } from 'react'
 import { EmacsDataTypes, Types, EmacsPayload, useStore } from '../store'
 import keymaps from '../data/keymap.json'
-import { MousetrapCallback } from 'shared-utils/mousetrap'
+import { MousetrapCallback } from '@aftt/shared-utils/mousetrap'
 import { useMousetrapBind } from './mousetrap'
 
 export function useHotkeyBind<Key>(
