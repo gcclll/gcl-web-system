@@ -1,1 +1,1 @@
-module.exports = require('config/.prettierrc.js')
+module.exports = require('@aftt/config/.prettierrc.js')

@@ -28,7 +28,12 @@ export function useHelpHotkey() {
   )
 }
 
-export function useAbortHotkey() {}
+export function useAbortHotkey() {
+  useHotkeyBind<Types.RESET_EMACS_POPUP_BUFFER>(
+    'control+g',
+    Types.RESET_EMACS_POPUP_BUFFER
+  )
+}
 
 export function useHotkeys() {
   // Control + h, help info
