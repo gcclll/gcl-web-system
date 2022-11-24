@@ -1,5 +1,5 @@
 {
-  "name": "shared-utils",
+  "name": "@aftt/shared-utils",
   "version": "0.0.0",
   "main": "./index.ts",
   "types": "./index.ts",
@@ -8,9 +8,9 @@
     "lint": "eslint *.ts*"
   },
   "devDependencies": {
-    "config": "workspace:*",
+    "@aftt/config": "workspace:*",
+    "@aftt/tsconfig": "workspace:*",
     "eslint": "^7.32.0",
-    "tsconfig": "workspace:*",
     "typescript": "^4.5.2"
   },
   "dependencies": {

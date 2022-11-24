@@ -20,77 +20,77 @@ importers:
       postcss: 8.4.18
       postcss-import: 15.0.0_postcss@8.4.18
       postcss-nested: 6.0.0_postcss@8.4.18
-      prettier: registry.npmmirror.com/prettier/2.7.1
-      prettier-plugin-tailwindcss: 0.1.13_prettier@2.7.1
+      prettier: 2.8.0
+      prettier-plugin-tailwindcss: 0.1.13_prettier@2.8.0
       tailwindcss: 3.1.8_postcss@8.4.18
-      turbo: registry.npmmirror.com/turbo/1.6.3
+      turbo: 1.6.3
 
   apps/blog:
     specifiers:
+      '@aftt/config': workspace:*
+      '@aftt/react-ui': workspace:*
+      '@aftt/shared-utils': workspace:*
+      '@aftt/tsconfig': workspace:*
       '@babel/core': ^7.0.0
       '@types/node': ^17.0.12
       '@types/react': 18.0.21
       '@types/react-dom': ^18.0.6
-      config: workspace:*
       eslint: 8.25.0
       next: 12.3.1
       next-transpile-modules: ^9.1.0
       react: 18.2.0
       react-dom: 18.2.0
       react-hotkeys-hook: ^3.4.7
-      react-ui: workspace:*
-      shared-utils: workspace:*
-      tsconfig: workspace:*
       typescript: 4.8.4
     dependencies:
+      '@aftt/react-ui': link:../../packages/react-ui
+      '@aftt/shared-utils': link:../../packages/shared-utils
       next: 12.3.1_6tziyx3dehkoeijunclpkpolha
       react: 18.2.0
       react-dom: 18.2.0_react@18.2.0
       react-hotkeys-hook: 3.4.7_biqbaboplfbrettd7655fr4n2y
-      react-ui: link:../../packages/react-ui
-      shared-utils: link:../../packages/shared-utils
     devDependencies:
+      '@aftt/config': link:../../packages/config
+      '@aftt/tsconfig': link:../../packages/tsconfig
       '@babel/core': 7.19.3
       '@types/node': 17.0.45
       '@types/react': 18.0.21
       '@types/react-dom': 18.0.6
-      config: link:../../packages/config
       eslint: 8.25.0
       next-transpile-modules: 9.1.0
-      tsconfig: link:../../packages/tsconfig
       typescript: 4.8.4
 
   apps/vue-map-charts:
     specifiers:
+      '@aftt/config': workspace:*
+      '@aftt/shared-utils': workspace:*
+      '@aftt/tsconfig': workspace:*
+      '@aftt/vue-ui': workspace:*
       '@rushstack/eslint-patch': ^1.1.4
       '@types/node': ^16.11.56
       '@vitejs/plugin-vue': ^3.0.3
       '@vitejs/plugin-vue-jsx': ^2.0.1
-      config: workspace:*
       npm-run-all: ^4.1.5
       pinia: ^2.0.21
-      shared-utils: workspace:*
-      tsconfig: workspace:*
       typescript: ~4.7.4
       vite: ^3.0.9
       vue: ^3.2.38
       vue-router: ^4.1.5
       vue-tsc: ^0.40.7
-      vue-ui: workspace:*
     dependencies:
+      '@aftt/shared-utils': link:../../packages/shared-utils
+      '@aftt/vue-ui': link:../../packages/vue-ui
       pinia: 2.0.23_lrjaoqkmph6q2hmgd3qeuy6rom
-      shared-utils: link:../../packages/shared-utils
       vue: 3.2.41
       vue-router: 4.1.6_vue@3.2.41
-      vue-ui: link:../../packages/vue-ui
     devDependencies:
+      '@aftt/config': link:../../packages/config
+      '@aftt/tsconfig': link:../../packages/tsconfig
       '@rushstack/eslint-patch': 1.2.0
       '@types/node': 16.18.1
       '@vitejs/plugin-vue': 3.2.0_vite@3.2.0+vue@3.2.41
       '@vitejs/plugin-vue-jsx': 2.1.0_vite@3.2.0+vue@3.2.41
-      config: link:../../packages/config
       npm-run-all: 4.1.5
-      tsconfig: link:../../packages/tsconfig
       typescript: 4.7.4
       vite: 3.2.0
       vue-tsc: 0.40.13_typescript@4.7.4
@@ -125,35 +125,35 @@ importers:
 
   packages/react-ui:
     specifiers:
+      '@aftt/config': workspace:*
+      '@aftt/shared-utils': workspace:*
+      '@aftt/tsconfig': workspace:*
       '@types/react': ^18.0.17
       '@types/react-dom': ^18.0.6
-      config: workspace:*
       react: ^18.2.0
-      shared-utils: workspace:*
-      tsconfig: workspace:*
       typescript: ^4.5.2
     devDependencies:
+      '@aftt/config': link:../config
+      '@aftt/shared-utils': link:../shared-utils
+      '@aftt/tsconfig': link:../tsconfig
       '@types/react': 18.0.21
       '@types/react-dom': 18.0.6
-      config: link:../config
       react: 18.2.0
-      shared-utils: link:../shared-utils
-      tsconfig: link:../tsconfig
       typescript: 4.8.4
 
   packages/shared-utils:
     specifiers:
-      config: workspace:*
+      '@aftt/config': workspace:*
+      '@aftt/tsconfig': workspace:*
       eslint: ^7.32.0
       mousetrap: ^1.6.5
-      tsconfig: workspace:*
       typescript: ^4.5.2
     dependencies:
       mousetrap: 1.6.5
     devDependencies:
-      config: link:../config
+      '@aftt/config': link:../config
+      '@aftt/tsconfig': link:../tsconfig
       eslint: 7.32.0
-      tsconfig: link:../tsconfig
       typescript: 4.8.4
 
   packages/tsconfig:
@@ -164,14 +164,14 @@ importers:
 
   packages/vue-ui:
     specifiers:
-      config: workspace:*
-      tsconfig: workspace:*
+      '@aftt/config': workspace:*
+      '@aftt/tsconfig': workspace:*
       vue: ^3.2.38
     dependencies:
       vue: 3.2.41
     devDependencies:
-      config: link:../config
-      tsconfig: link:../tsconfig
+      '@aftt/config': link:../config
+      '@aftt/tsconfig': link:../tsconfig
 
 packages:
 
@@ -3182,7 +3182,6 @@ packages:
 
   /graceful-fs/4.2.10:
     resolution: {integrity: sha512-9ByhssR2fPVsNZj478qUUbKfmL0+t5BDVyjShtyZZLiK7ZDAArFFfopyOTj0M05wE2tJPisA4iTnnXl2YoPvOA==}
-    dev: true
 
   /grapheme-splitter/1.0.4:
     resolution: {integrity: sha512-bzh50DW9kTPM00T8y4o8vQg89Di9oLJVLW/KaOGIXJWP/iqCN6WKYkbNOF04vFLJhwcpYUh9ydh/+5vpOqV4YQ==}
@@ -4146,13 +4145,13 @@ packages:
       fast-diff: 1.2.0
     dev: true
 
-  /prettier-plugin-tailwindcss/0.1.13_prettier@2.7.1:
+  /prettier-plugin-tailwindcss/0.1.13_prettier@2.8.0:
     resolution: {integrity: sha512-/EKQURUrxLu66CMUg4+1LwGdxnz8of7IDvrSLqEtDqhLH61SAlNNUSr90UTvZaemujgl3OH/VHg+fyGltrNixw==}
     engines: {node: '>=12.17.0'}
     peerDependencies:
       prettier: '>=2.2.0'
     dependencies:
-      prettier: registry.npmmirror.com/prettier/2.7.1
+      prettier: 2.8.0
     dev: true
 
   /prettier/2.7.1:
@@ -4160,6 +4159,11 @@ packages:
     engines: {node: '>=10.13.0'}
     hasBin: true
     dev: true
+
+  /prettier/2.8.0:
+    resolution: {integrity: sha512-9Lmg8hTFZKG0Asr/kW9Bp8tJjRVluO8EJQVfY2T7FMw9T5jy4I/Uvx0Rca/XWf50QQ1/SS48+6IJWnrb+2yemA==}
+    engines: {node: '>=10.13.0'}
+    hasBin: true
 
   /progress/2.0.3:
     resolution: {integrity: sha512-7PiHtLll5LdnKIMw100I+8xJXR5gW2QwWYkT6iJva0bXitZKa/XMrSbdmg3r2Xnaidz9Qumd0VPaMrZlF9V9sA==}
@@ -4672,6 +4676,67 @@ packages:
       typescript: 4.8.4
     dev: true
 
+  /turbo-darwin-64/1.6.3:
+    resolution: {integrity: sha512-QmDIX0Yh1wYQl0bUS0gGWwNxpJwrzZU2GIAYt3aOKoirWA2ecnyb3R6ludcS1znfNV2MfunP+l8E3ncxUHwtjA==}
+    cpu: [x64]
+    os: [darwin]
+    requiresBuild: true
+    dev: true
+    optional: true
+
+  /turbo-darwin-arm64/1.6.3:
+    resolution: {integrity: sha512-75DXhFpwE7CinBbtxTxH08EcWrxYSPFow3NaeFwsG8aymkWXF+U2aukYHJA6I12n9/dGqf7yRXzkF0S/9UtdyQ==}
+    cpu: [arm64]
+    os: [darwin]
+    requiresBuild: true
+    dev: true
+    optional: true
+
+  /turbo-linux-64/1.6.3:
+    resolution: {integrity: sha512-O9uc6J0yoRPWdPg9THRQi69K6E2iZ98cRHNvus05lZbcPzZTxJYkYGb5iagCmCW/pq6fL4T4oLWAd6evg2LGQA==}
+    cpu: [x64]
+    os: [linux]
+    requiresBuild: true
+    dev: true
+    optional: true
+
+  /turbo-linux-arm64/1.6.3:
+    resolution: {integrity: sha512-dCy667qqEtZIhulsRTe8hhWQNCJO0i20uHXv7KjLHuFZGCeMbWxB8rsneRoY+blf8+QNqGuXQJxak7ayjHLxiA==}
+    cpu: [arm64]
+    os: [linux]
+    requiresBuild: true
+    dev: true
+    optional: true
+
+  /turbo-windows-64/1.6.3:
+    resolution: {integrity: sha512-lKRqwL3mrVF09b9KySSaOwetehmGknV9EcQTF7d2dxngGYYX1WXoQLjFP9YYH8ZV07oPm+RUOAKSCQuDuMNhiA==}
+    cpu: [x64]
+    os: [win32]
+    requiresBuild: true
+    dev: true
+    optional: true
+
+  /turbo-windows-arm64/1.6.3:
+    resolution: {integrity: sha512-BXY1sDPEA1DgPwuENvDCD8B7Hb0toscjus941WpL8CVd10hg9pk/MWn9CNgwDO5Q9ks0mw+liDv2EMnleEjeNA==}
+    cpu: [arm64]
+    os: [win32]
+    requiresBuild: true
+    dev: true
+    optional: true
+
+  /turbo/1.6.3:
+    resolution: {integrity: sha512-FtfhJLmEEtHveGxW4Ye/QuY85AnZ2ZNVgkTBswoap7UMHB1+oI4diHPNyqrQLG4K1UFtCkjOlVoLsllUh/9QRw==}
+    hasBin: true
+    requiresBuild: true
+    optionalDependencies:
+      turbo-darwin-64: 1.6.3
+      turbo-darwin-arm64: 1.6.3
+      turbo-linux-64: 1.6.3
+      turbo-linux-arm64: 1.6.3
+      turbo-windows-64: 1.6.3
+      turbo-windows-arm64: 1.6.3
+    dev: true
+
   /type-check/0.4.0:
     resolution: {integrity: sha512-XleUoc9uwGXqjWwXaUTZAmzMcFZ5858QA2vvx1Ur5xIcixXIP+8LnFDgRplU30us6teqdlskFfu+ae4K79Ooew==}
     engines: {node: '>= 0.8.0'}
@@ -4974,7 +5039,7 @@ packages:
       fs-extra: registry.npmmirror.com/fs-extra/7.0.1
       lodash.startcase: registry.npmmirror.com/lodash.startcase/4.4.0
       outdent: registry.npmmirror.com/outdent/0.5.0
-      prettier: registry.npmmirror.com/prettier/2.7.1
+      prettier: 2.8.0
       resolve-from: registry.npmmirror.com/resolve-from/5.0.0
       semver: registry.npmmirror.com/semver/5.7.1
     dev: false
@@ -5173,7 +5238,7 @@ packages:
       '@changesets/types': registry.npmmirror.com/@changesets/types/5.2.0
       fs-extra: registry.npmmirror.com/fs-extra/7.0.1
       human-id: registry.npmmirror.com/human-id/1.0.2
-      prettier: registry.npmmirror.com/prettier/2.7.1
+      prettier: 2.8.0
     dev: false
 
   registry.npmmirror.com/@manypkg/find-root/1.1.0:
@@ -5749,7 +5814,7 @@ packages:
     version: 8.1.0
     engines: {node: '>=6 <7 || >=8'}
     dependencies:
-      graceful-fs: registry.npmmirror.com/graceful-fs/4.2.10
+      graceful-fs: 4.2.10
       jsonfile: registry.npmmirror.com/jsonfile/4.0.0
       universalify: registry.npmmirror.com/universalify/0.1.2
     dev: false
@@ -6149,7 +6214,7 @@ packages:
     name: jsonfile
     version: 4.0.0
     optionalDependencies:
-      graceful-fs: registry.npmmirror.com/graceful-fs/4.2.10
+      graceful-fs: 4.2.10
     dev: false
 
   registry.npmmirror.com/kind-of/6.0.3:
@@ -6467,13 +6532,6 @@ packages:
       which-pm: registry.npmmirror.com/which-pm/2.0.0
     dev: false
 
-  registry.npmmirror.com/prettier/2.7.1:
-    resolution: {integrity: sha512-ujppO+MkdPqoVINuDFDRLClm7D78qbDt0/NR+wp5FqEZOoTNAjPHWj17QRhu7geIHJfcNhRk1XVQmF8Bp3ye+g==, registry: https://registry.npm.taobao.org/, tarball: https://registry.npmmirror.com/prettier/-/prettier-2.7.1.tgz}
-    name: prettier
-    version: 2.7.1
-    engines: {node: '>=10.13.0'}
-    hasBin: true
-
   registry.npmmirror.com/pseudomap/1.0.2:
     resolution: {integrity: sha512-b/YwNhb8lk1Zz2+bXXpS/LK9OisiZZ1SNsSLxN1x2OXVEhW2Ckr/7mWE5vrC1ZTiJlD9g19jWszTmJsB+oEpFQ==, registry: https://registry.npm.taobao.org/, tarball: https://registry.npmmirror.com/pseudomap/-/pseudomap-1.0.2.tgz}
     name: pseudomap
@@ -6522,7 +6580,7 @@ packages:
     version: 1.1.0
     engines: {node: '>=6'}
     dependencies:
-      graceful-fs: registry.npmmirror.com/graceful-fs/4.2.10
+      graceful-fs: 4.2.10
       js-yaml: registry.npmmirror.com/js-yaml/3.14.1
       pify: registry.npmmirror.com/pify/4.0.1
       strip-bom: registry.npmmirror.com/strip-bom/3.0.0
@@ -6865,81 +6923,6 @@ packages:
       wcwidth: registry.npmmirror.com/wcwidth/1.0.1
       yargs: registry.npmmirror.com/yargs/17.6.2
     dev: false
-
-  registry.npmmirror.com/turbo-darwin-64/1.6.3:
-    resolution: {integrity: sha512-QmDIX0Yh1wYQl0bUS0gGWwNxpJwrzZU2GIAYt3aOKoirWA2ecnyb3R6ludcS1znfNV2MfunP+l8E3ncxUHwtjA==, registry: https://registry.npm.taobao.org/, tarball: https://registry.npmmirror.com/turbo-darwin-64/-/turbo-darwin-64-1.6.3.tgz}
-    name: turbo-darwin-64
-    version: 1.6.3
-    cpu: [x64]
-    os: [darwin]
-    requiresBuild: true
-    dev: true
-    optional: true
-
-  registry.npmmirror.com/turbo-darwin-arm64/1.6.3:
-    resolution: {integrity: sha512-75DXhFpwE7CinBbtxTxH08EcWrxYSPFow3NaeFwsG8aymkWXF+U2aukYHJA6I12n9/dGqf7yRXzkF0S/9UtdyQ==, registry: https://registry.npm.taobao.org/, tarball: https://registry.npmmirror.com/turbo-darwin-arm64/-/turbo-darwin-arm64-1.6.3.tgz}
-    name: turbo-darwin-arm64
-    version: 1.6.3
-    cpu: [arm64]
-    os: [darwin]
-    requiresBuild: true
-    dev: true
-    optional: true
-
-  registry.npmmirror.com/turbo-linux-64/1.6.3:
-    resolution: {integrity: sha512-O9uc6J0yoRPWdPg9THRQi69K6E2iZ98cRHNvus05lZbcPzZTxJYkYGb5iagCmCW/pq6fL4T4oLWAd6evg2LGQA==, registry: https://registry.npm.taobao.org/, tarball: https://registry.npmmirror.com/turbo-linux-64/-/turbo-linux-64-1.6.3.tgz}
-    name: turbo-linux-64
-    version: 1.6.3
-    cpu: [x64]
-    os: [linux]
-    requiresBuild: true
-    dev: true
-    optional: true
-
-  registry.npmmirror.com/turbo-linux-arm64/1.6.3:
-    resolution: {integrity: sha512-dCy667qqEtZIhulsRTe8hhWQNCJO0i20uHXv7KjLHuFZGCeMbWxB8rsneRoY+blf8+QNqGuXQJxak7ayjHLxiA==, registry: https://registry.npm.taobao.org/, tarball: https://registry.npmmirror.com/turbo-linux-arm64/-/turbo-linux-arm64-1.6.3.tgz}
-    name: turbo-linux-arm64
-    version: 1.6.3
-    cpu: [arm64]
-    os: [linux]
-    requiresBuild: true
-    dev: true
-    optional: true
-
-  registry.npmmirror.com/turbo-windows-64/1.6.3:
-    resolution: {integrity: sha512-lKRqwL3mrVF09b9KySSaOwetehmGknV9EcQTF7d2dxngGYYX1WXoQLjFP9YYH8ZV07oPm+RUOAKSCQuDuMNhiA==, registry: https://registry.npm.taobao.org/, tarball: https://registry.npmmirror.com/turbo-windows-64/-/turbo-windows-64-1.6.3.tgz}
-    name: turbo-windows-64
-    version: 1.6.3
-    cpu: [x64]
-    os: [win32]
-    requiresBuild: true
-    dev: true
-    optional: true
-
-  registry.npmmirror.com/turbo-windows-arm64/1.6.3:
-    resolution: {integrity: sha512-BXY1sDPEA1DgPwuENvDCD8B7Hb0toscjus941WpL8CVd10hg9pk/MWn9CNgwDO5Q9ks0mw+liDv2EMnleEjeNA==, registry: https://registry.npm.taobao.org/, tarball: https://registry.npmmirror.com/turbo-windows-arm64/-/turbo-windows-arm64-1.6.3.tgz}
-    name: turbo-windows-arm64
-    version: 1.6.3
-    cpu: [arm64]
-    os: [win32]
-    requiresBuild: true
-    dev: true
-    optional: true
-
-  registry.npmmirror.com/turbo/1.6.3:
-    resolution: {integrity: sha512-FtfhJLmEEtHveGxW4Ye/QuY85AnZ2ZNVgkTBswoap7UMHB1+oI4diHPNyqrQLG4K1UFtCkjOlVoLsllUh/9QRw==, registry: https://registry.npm.taobao.org/, tarball: https://registry.npmmirror.com/turbo/-/turbo-1.6.3.tgz}
-    name: turbo
-    version: 1.6.3
-    hasBin: true
-    requiresBuild: true
-    optionalDependencies:
-      turbo-darwin-64: registry.npmmirror.com/turbo-darwin-64/1.6.3
-      turbo-darwin-arm64: registry.npmmirror.com/turbo-darwin-arm64/1.6.3
-      turbo-linux-64: registry.npmmirror.com/turbo-linux-64/1.6.3
-      turbo-linux-arm64: registry.npmmirror.com/turbo-linux-arm64/1.6.3
-      turbo-windows-64: registry.npmmirror.com/turbo-windows-64/1.6.3
-      turbo-windows-arm64: registry.npmmirror.com/turbo-windows-arm64/1.6.3
-    dev: true
 
   registry.npmmirror.com/type-fest/0.13.1:
     resolution: {integrity: sha512-34R7HTnG0XIJcBSn5XhDd7nNFPRcXYRZrBB2O2jdKqYODldSzBAqzsWoZYYvduky73toYS/ESqxPvkDf/F0XMg==, registry: https://registry.npm.taobao.org/, tarball: https://registry.npmmirror.com/type-fest/-/type-fest-0.13.1.tgz}
