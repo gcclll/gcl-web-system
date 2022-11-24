@@ -1,1 +1,1 @@
-module.exports = require('config/eslint/vue')
+module.exports = require('config/eslint-preset')
